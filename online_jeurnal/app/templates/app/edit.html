@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Student</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Name" value='{{ student.name }}'>
+        <input type="text" name="surname" placeholder="Surname" value='{{ student.surname }}'>
+        <select>
+            <option value="1">Math</option>
+            <option value="2">Geography</option>
+            <option value="3">Russian</option>
+            <option value="4">Physics</option>
+            <option value="5">Biology</option>
+        </select>
+        <input type="number" name="gpa" placeholder="GPA" value='{{ student.gpa }}'>
+    </form>
+</body>
+</html>

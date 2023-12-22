@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+    <title>Journal Scores</title>
+</head>
+<body>
+    <section class="students-scores-wrapper">
+        {% for student in students %}
+        <div class="student-block">
+            <p>{{ student.name }} {{ student.surname }}</p>
+            <p>{{ student.subj }}</p>
+            <p>{{ student.score }}</p>
+            <p>{{ student.gpa }}</p>
+            <div class="links-wrapper">
+                <a href="/jeurnal/edit/{{student.id}}">Edit</a>
+                <a href="/jeurnal/delete/{{student.id}}">Delete</a>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+</body>
+</html>

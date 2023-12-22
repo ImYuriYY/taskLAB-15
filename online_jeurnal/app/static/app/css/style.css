@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.students-scores-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.student-block {
+    width: 45%;
+    background-color: grey;
+}
+.student-block p {
+    padding: 10px;
+}
+
+.links-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
